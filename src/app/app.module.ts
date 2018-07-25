@@ -1,3 +1,6 @@
+import { DollarDirective } from './shared/directives/addDollar.directive';
+import { ThreadSectionComponent } from './thread-section/thread-section.component';
+
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -6,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ApiService } from './shared';
+import { ApiService, ThreadsService } from './shared';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -21,10 +24,13 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ThreadSectionComponent,
+    DollarDirective
   ],
   providers: [
-    ApiService
+    ApiService,
+    ThreadsService
   ],
   bootstrap: [AppComponent]
 })
