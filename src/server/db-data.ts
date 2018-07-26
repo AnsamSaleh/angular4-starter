@@ -1,5 +1,5 @@
-import { Message } from './../app/shared/model/message';
-import { Participant } from './../app/shared/model/participant';
+import { Message } from '../app/shared/model/message';
+import { Participant } from '../app/shared/model/participant';
 import { Thread } from '../app/shared/model/thread';
 
 

@@ -1,3 +1,15 @@
-<p>
-  About Works!
-</p>
+<div>
+  <h2>About Works!</h2>
+  <ng-container *ngTemplateOutlet="getTemplate()"></ng-container>
+  <button (click)="switchTpl()">switchTpl</button>
+</div>
+
+<ng-template #template1>
+  <h3>template1</h3>
+  <p>template1 template1 xyzzzz</p>
+</ng-template>
+
+<ng-template #template2>
+  <h3>template2</h3>
+  <p>template2 template2 abc</p>
+</ng-template>

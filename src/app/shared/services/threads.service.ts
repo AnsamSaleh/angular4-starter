@@ -1,4 +1,4 @@
-import { AllUserData } from './../model/AllUserData';
+import { AllUserData } from '../model/AllUserData';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -10,12 +10,14 @@ const INIT_STATE: AllUserData = {
     threads: [],
     messages: []
 };
-
+//this.ThreadsService.thread.data   
 /**
 * This class provides the Threads service with methods to read names and add names.
 */
 @Injectable()
 export class ThreadsService {
+
+private thread = new Store(initialState)
 
     private threadsSubject = new BehaviorSubject(INIT_STATE);
     public threads$: Observable<AllUserData> = this.threadsSubject.asObservable();

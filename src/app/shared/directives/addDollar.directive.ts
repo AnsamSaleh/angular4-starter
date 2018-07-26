@@ -17,6 +17,7 @@ export class DollarDirective implements OnInit {
     @Input()
     @HostBinding('class.isActive')
     set isActive(val: boolean) {
+        console.log("test", val);
         //randomly adds 'isActive' class
         //when isActive is set TRUE
         if (Math.floor(Math.random() * 10) + 1 > 5) {

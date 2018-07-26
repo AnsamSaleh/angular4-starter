@@ -5,9 +5,12 @@
         <span class="unread-messages-counter" [ngClass]="{unread: (unreadMessagesCounter$ | async) > 0 }">
             Unread messages: {{unreadMessagesCounter$ | async }}
         </span>
-        <span>
-            {{threads$ | async | json}}
+        <span *ngIf="threads$ | async; let threads" >
+            {{threads | json}}
         </span>
+        <ng-template #loading>
+            <span>loading...</span>
+        </ng-template>
     </div>
 
 </div>
