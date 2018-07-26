@@ -17,8 +17,6 @@ const INIT_STATE: AllUserData = {
 @Injectable()
 export class ThreadsService {
 
-private thread = new Store(initialState)
-
     private threadsSubject = new BehaviorSubject(INIT_STATE);
     public threads$: Observable<AllUserData> = this.threadsSubject.asObservable();
 
